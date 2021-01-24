@@ -1,0 +1,52 @@
+{% extends  'app1/base.html' %}
+
+
+
+{% block content %}
+{% include 'app1/nav.html' %}
+<div class ='container'>
+    <h1 class="center-align">My projects</h1>
+    <div class="row">
+        <div class="col s12 m6">
+            <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">About Me</span>
+          <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+        </div>
+      </div>
+
+        </div>
+
+
+        <div class="col s12 m6">
+             <ul class="collapsible">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems);
+  });
+
+ </script>
+{% endblock %}
